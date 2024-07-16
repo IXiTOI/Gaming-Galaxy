@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ритм-игры</title>
+    <link rel="stylesheet" href="genres.css">
+    <link rel="icon" type="image/png" href="/img/logo.png" sizes="32x32">
+</head>
+<body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const gamesContainer = document.querySelector('.Games');
+        
+            function filterGames() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const gameElements = gamesContainer.querySelectorAll('.GameList');
+        
+                gameElements.forEach(game => {
+                    const gameTitle = game.querySelector('.name').textContent.toLowerCase();
+        
+                    if (gameTitle.includes(searchTerm)) {
+                        game.style.display = '';
+                    } else {
+                        game.style.display = 'none';
+                    }
+                });
+            }
+        
+            searchInput.addEventListener('input', filterGames);
+        });
+    </script>
+
+    <script src="video.js"></script>
+
+    <header>
+        <a href="index.html" ><img class="logoImage" src="img/logo.png" alt="Логотип" title="На главную"></a>
+        <div class="sign-wrap">
+            <div class="logo">Gam<span>in</span>g<span> Ga</span>lax<span>y</span></div>
+        </div>
+        <ul class="main-menu">
+            <input type="text" id="searchInput" placeholder="Поиск игры...">
+            <li><a href="news.html">Новости</a></li>
+            <li class="menu-children">
+                <a href="#url">Жанры</a>
+                <ul>
+                    <li>
+                        <a href="RPG.html">RPG</a>
+                    </li>
+                    <li>
+                        <a href="Shooter.html">Шутер</a>
+                    </li>
+                    <li>
+                        <a href="Rhythm.html">Ритм-игры</a>
+                    </li>
+                    <li>
+                        <a href="Metroidvania.html">Метроидвания</a>
+                    </li>
+                    <li>
+                        <a href="VisualNovel.html">Визуальные новеллы</a>  
+                    </li>  
+                    <li>
+                        <a href="Adventures.html">Приключения</a>
+                    </li>
+                    <li>
+                        <a href="Puzzle.html">Головоломка</a>
+                    </li>
+                    <li>
+                        <a href="Strategies.html">Стратегия</a>
+                    </li>
+                    <li>
+                        <a href="Sandbox.html">Песочница</a>  
+                    </li>       
+                </ul>
+            </li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>        
+        </ul>
+    </header>
+
+    <h1><u>Ритм-игры:</u></h1>
+    <div class="Games">
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/qBRTCGntMoVp-5J_EEsdSw.jpeg?208x288" alt="Rock Band" title="Rock Band">
+                    <br clear="all">
+                    <p class="name">Rock Band</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame1"><b>></b></div>
+                <div id="videoFrame1" class="hidden">
+                    <iframe src="video/Rock_Band.mp4" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/z-riXag00iXDW0n1mBKPVA.jpeg?208x288" alt="Beat Saber" title="Beat Saber">
+                    <br clear="all">
+                    <p class="name">Beat Saber</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame2"><b>></b></div>
+                <div id="videoFrame2" class="hidden">
+                    <iframe src="video/Beat_Saber.mp4" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/0bORFDeMdP0qwH0IMwfuTw.jpeg?208x288" alt="Just Dance 2019" title="Just Dance 2019">
+                    <br clear="all">
+                    <p class="name">Just Dance 2019</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame3"><b>></b></div>
+                <div id="videoFrame3" class="hidden">
+                    <iframe src="video/Just_Dance_2019.mp4" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/M_u3eGc_SwTsJ03L0rQAtA.jpeg?208x288" alt="Amplitude" title="Amplitude">
+                    <br clear="all">
+                    <p class="name">Amplitude</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame4"><b>></b></div>
+                <div id="videoFrame4" class="hidden">
+                    <iframe src="video/Amplitude.mp4" title="Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/gnbZjt2NiuSqnubFabWpFA.jpeg?208x288" alt="Fuser" title="Fuser">
+                    <br clear="all">
+                    <p class="name">Fuser</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame5"><b>></b></div>
+                <div id="videoFrame5" class="hidden">
+                    <iframe src="video/Fuser.mp4" title="Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/Uoy5JgN6NjUkoaK5TpBGXA.jpeg?208x288" alt="Audiosurf" title="Audiosurf">
+                    <br clear="all">
+                    <p class="name">Audiosurf</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame6"><b>></b></div>
+                <div id="videoFrame6" class="hidden">
+                    <iframe src="video/Audiosurf.mp4" title="Video 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/Npog0dIfRY7PyBo_XPxHVg.jpeg?208x288" alt="Thumper" title="Thumper">
+                    <br clear="all">
+                    <p class="name">Thumper</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame7"><b>></b></div>
+                <div id="videoFrame7" class="hidden">
+                    <iframe src="video/Thumper.mp4" title="Video 7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <footer>
+        <p>&copy; 2024 Gaming Galaxy</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шутер</title>
+    <link rel="stylesheet" href="genres.css">
+    <link rel="icon" type="image/png" href="/img/logo.png" sizes="32x32">
+</head>
+<body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const gamesContainer = document.querySelector('.Games');
+        
+            function filterGames() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const gameElements = gamesContainer.querySelectorAll('.GameList');
+        
+                gameElements.forEach(game => {
+                    const gameTitle = game.querySelector('.name').textContent.toLowerCase();
+        
+                    if (gameTitle.includes(searchTerm)) {
+                        game.style.display = '';
+                    } else {
+                        game.style.display = 'none';
+                    }
+                });
+            }
+        
+            searchInput.addEventListener('input', filterGames);
+        });
+    </script>
+
+    <script src="video.js"></script>
+
+    <header>
+        <a href="index.html" ><img class="logoImage" src="img/logo.png" alt="Логотип" title="На главную"></a>
+        <div class="sign-wrap">
+            <div class="logo">Gam<span>in</span>g<span> Ga</span>lax<span>y</span></div>
+        </div>
+        <ul class="main-menu">
+            <input type="text" id="searchInput" placeholder="Поиск игры...">
+            <li><a href="news.html">Новости</a></li>
+            <li class="menu-children">
+                <a href="#url">Жанры</a>
+                <ul>
+                    <li>
+                        <a href="RPG.html">RPG</a>
+                    </li>
+                    <li>
+                        <a href="Shooter.html">Шутер</a>
+                    </li>
+                    <li>
+                        <a href="Rhythm.html">Ритм-игры</a>
+                    </li>
+                    <li>
+                        <a href="Metroidvania.html">Метроидвания</a>
+                    </li>
+                    <li>
+                        <a href="VisualNovel.html">Визуальные новеллы</a>  
+                    </li>  
+                    <li>
+                        <a href="Adventures.html">Приключения</a>
+                    </li>
+                    <li>
+                        <a href="Puzzle.html">Головоломка</a>
+                    </li>
+                    <li>
+                        <a href="Strategies.html">Стратегия</a>
+                    </li>
+                    <li>
+                        <a href="Sandbox.html">Песочница</a>  
+                    </li>       
+                </ul>
+            </li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>        
+        </ul>
+    </header>
+
+    <h1><u>Шутеры:</u></h1>
+    <div class="Games">
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/0jak7RDuZFq9AmpdZSn7-w.jpeg.webp?202x279" alt="Doom: The Dark Ages" title="Doom: The Dark Ages">
+                    <br clear="all">
+                    <p class="name">Doom: The Dark Ages</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame1"><b>></b></div>
+                <div id="videoFrame1" class="hidden">
+                    <iframe src="video/Doom_The_Dark_Ages.mp4" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/hf4GlFIQl4eWrhSpW2H5WQ.jpeg.webp?202x279" alt="S.T.A.L.K.E.R. 2: Heart of Chornobyl" title="S.T.A.L.K.E.R. 2: Heart of Chornobyl">
+                    <br clear="all">
+                    <p class="name">S.T.A.L.K.E.R. 2</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame2"><b>></b></div>
+                <div id="videoFrame2" class="hidden">
+                    <iframe src="video/S_T_A_L_K_E_R_2_Heart_of_Chornobyl.mp4" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/jobfUbZRrl4sjg0sdzGemA.jpeg.webp?202x279" alt="Gears of War: E-Day" title="Gears of War: E-Day">
+                    <br clear="all">
+                    <p class="name">Gears of War: E-Day</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame3"><b>></b></div>
+                <div id="videoFrame3" class="hidden">
+                    <iframe src="video/Gears_of_War_E-Day.mp4" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/tUUQU8HWytf1seJTHP_1BA.jpeg.webp?202x279" alt="Call of Duty: Black Ops 6" title="Call of Duty: Black Ops 6">
+                    <br clear="all">
+                    <p class="name">Call of Duty: Black Ops 6</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame4"><b>></b></div>
+                <div id="videoFrame4" class="hidden">
+                    <iframe src="video/Call_of_Duty_Black_Ops_6.mp4" title="Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/JZ5KG9y6L208PIsLEVD0pw.jpeg?208x288" alt="Warhammer 40,000: Space Marine 2" title="Warhammer 40,000: Space Marine 2">
+                    <br clear="all">
+                    <p class="name">Warhammer 40,000</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame5"><b>></b></div>
+                <div id="videoFrame5" class="hidden">
+                    <iframe src="video/Warhammer_40000_Space_Marine_2.mp4" title="Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/7KM98dKyaMnQGQbfUIMrtQ.jpeg?208x288" alt="Resident Evil 9" title="Resident Evil 9">
+                    <br clear="all">
+                    <p class="name">Resident Evil 9</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame6"><b>></b></div>
+                <div id="videoFrame6" class="hidden">
+                    <iframe src="video/Resident_Evil_9.mp4" title="Video 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/fZnb_SPD5cAFa4Yb6GapQw.jpeg?208x288" alt="Far Cry 7" title="Far Cry 7">
+                    <br clear="all">
+                    <p class="name">Far Cry 7</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame7"><b>></b></div>
+                <div id="videoFrame7" class="hidden">
+                    <iframe src="video/Far_Cry_7.mp4" title="Video 7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/iUrTUxZnPQXTWZwg3txqIw.jpeg?208x288" alt="Starship Troopers: Extermination" title="Starship Troopers: Extermination">
+                    <br clear="all">
+                    <p class="name">Starship Troopers</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame8"><b>></b></div>
+                <div id="videoFrame8" class="hidden">
+                    <iframe src="video/Starship_Troopers_Extermination.mp4" title="Video 8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/lCA5G6djWMccDkVR2dCdPw.jpeg?208x288" alt="Counter-Strike 2" title="Counter-Strike 2">
+                    <br clear="all">
+                    <p class="name">Counter-Strike 2</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame9"><b>></b></div>
+                <div id="videoFrame9" class="hidden">
+                    <iframe src="video/KCGO.mp4" title="Video 9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <footer>
+        <p>&copy; 2024 Gaming Galaxy</p>
+    </footer>
+</body>
+</html>

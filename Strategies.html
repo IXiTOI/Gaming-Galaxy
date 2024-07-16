@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стратегии</title>
+    <link rel="stylesheet" href="genres.css">
+    <link rel="icon" type="image/png" href="/img/logo.png" sizes="32x32">
+</head>
+<body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const gamesContainer = document.querySelector('.Games');
+        
+            function filterGames() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const gameElements = gamesContainer.querySelectorAll('.GameList');
+        
+                gameElements.forEach(game => {
+                    const gameTitle = game.querySelector('.name').textContent.toLowerCase();
+        
+                    if (gameTitle.includes(searchTerm)) {
+                        game.style.display = '';
+                    } else {
+                        game.style.display = 'none';
+                    }
+                });
+            }
+        
+            searchInput.addEventListener('input', filterGames);
+        });
+    </script>
+
+    <script src="video.js"></script>
+
+    <header>
+        <a href="index.html" ><img class="logoImage" src="img/logo.png" alt="Логотип" title="На главную"></a>
+        <div class="sign-wrap">
+            <div class="logo">Gam<span>in</span>g<span> Ga</span>lax<span>y</span></div>
+        </div>
+        <ul class="main-menu">
+            <input type="text" id="searchInput" placeholder="Поиск игры...">
+            <li><a href="news.html">Новости</a></li>
+            <li class="menu-children">
+                <a href="#url">Жанры</a>
+                <ul>
+                    <li>
+                        <a href="RPG.html">RPG</a>
+                    </li>
+                    <li>
+                        <a href="Shooter.html">Шутер</a>
+                    </li>
+                    <li>
+                        <a href="Rhythm.html">Ритм-игры</a>
+                    </li>
+                    <li>
+                        <a href="Metroidvania.html">Метроидвания</a>
+                    </li>
+                    <li>
+                        <a href="VisualNovel.html">Визуальные новеллы</a>  
+                    </li>  
+                    <li>
+                        <a href="Adventures.html">Приключения</a>
+                    </li>
+                    <li>
+                        <a href="Puzzle.html">Головоломка</a>
+                    </li>
+                    <li>
+                        <a href="Strategies.html">Стратегия</a>
+                    </li>
+                    <li>
+                        <a href="Sandbox.html">Песочница</a>  
+                    </li>       
+                </ul>
+            </li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>        
+        </ul>
+    </header>
+
+    <h1><u>Стратегии:</u></h1>
+    <div class="Games">
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/SB2dA-eIjT-OlT96G6Losw.jpeg?208x288" alt="Age of Wonders 4" title="Age of Wonders 4">
+                    <br clear="all">
+                    <p class="name">Age of Wonders 4</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame1"><b>></b></div>
+                <div id="videoFrame1" class="hidden">
+                    <iframe src="video/Age_of_Wonders_4.mp4" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/wyo0jdsi2DFfLMX4qVlbDA.jpeg?208x288" alt="Jagged Alliance 3" title="Jagged Alliance 3">
+                    <br clear="all">
+                    <p class="name">Jagged Alliance 3</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame2"><b>></b></div>
+                <div id="videoFrame2" class="hidden">
+                    <iframe src="video/Jagged_Alliance_3.mp4" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/9_LtdhfH_HrFziCxilg67w.jpeg?208x288" alt="Heroes of Might and Magic 5" title="Heroes of Might and Magic 5">
+                    <br clear="all">
+                    <p class="name">Heroes of Might and Magic 5</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame3"><b>></b></div>
+                <div id="videoFrame3" class="hidden">
+                    <iframe src="video/Heroes_of_Might_and_Magic_5.mp4" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/KQnFgyQmDwziFuMbL-rXwA.jpeg?208x288" alt="Mutant Year Zero: Road to Eden" title="Mutant Year Zero: Road to Eden">
+                    <br clear="all">
+                    <p class="name">Mutant Year Zero: Road to Eden</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame4"><b>></b></div>
+                <div id="videoFrame4" class="hidden">
+                    <iframe src="video/Mutant_Year_Zero_Road_to_Eden.mp4" title="Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/dKBZifnTeAU2d50AolyL8w.jpeg?208x288" alt="Divinity: Original Sin" title="Divinity: Original Sin">
+                    <br clear="all">
+                    <p class="name">Divinity: Original Sin</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame5"><b>></b></div>
+                <div id="videoFrame5" class="hidden">
+                    <iframe src="video/Divinity_Original_Sin.mp4" title="Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/-q1AAhoa5PdVr5ScFQdMEQ.jpeg?208x288" alt="Sid Meier's Civilization 7" title="Sid Meier's Civilization 7">
+                    <br clear="all">
+                    <p class="name">Sid Meier's Civilization 7</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame6"><b>></b></div>
+                <div id="videoFrame6" class="hidden">
+                    <iframe src="video/Sid_Meier_s_Civilization_7.mp4" title="Video 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/UKq-Vf-vbGlV1KIUvyALwQ.jpeg?208x288" alt="Total War: Warhammer 2" title="Total War: Warhammer 2">
+                    <br clear="all">
+                    <p class="name">Total War: Warhammer 2</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame7"><b>></b></div>
+                <div id="videoFrame7" class="hidden">
+                    <iframe src="video/Total_War_Warhammer_2.mp4" title="Video 7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/KHZ-56V_prY1Dv3ZA16y1w.jpeg?208x288" alt="Medieval 2: Total War" title="Medieval 2: Total War">
+                    <br clear="all">
+                    <p class="name">Medieval 2: Total War</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame8"><b>></b></div>
+                <div id="videoFrame8" class="hidden">
+                    <iframe src="video/Medieval_2_Total_War.mp4" title="Video 8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/tyfq38A5DSTjnqf1qId3zA.jpeg?208x288" alt="Endless Space 2" title="Endless Space 2">
+                    <br clear="all">
+                    <p class="name">Endless Space 2</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame9"><b>></b></div>
+                <div id="videoFrame9" class="hidden">
+                    <iframe src="video/Endless_Space_2.mp4" title="Video 9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <footer>
+        <p>&copy; 2024 Gaming Galaxy</p>
+    </footer>
+</body>
+</html>

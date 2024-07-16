@@ -1,0 +1,86 @@
+*{
+    color: white;
+
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo {
+    margin-left: -692px;
+    font-size: 2em;
+    color: rgb(240, 240, 240);
+    user-select: none;
+}
+.logoImage {
+    width: 70px;
+}
+input{
+    border-radius: 5px;
+}
+textarea{
+    border-radius: 5px;
+}
+#email{
+    margin-right: 50px;
+}
+#tel{
+    margin-right: 52px;
+}
+#addres{
+    margin-right: 58px;
+}
+.wrapper{
+    margin-left: 100px;
+}
+textarea{
+    width: 300px;
+    color: black;
+}
+.contact-container{
+    border: 2px solid #078dff;
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 10px;
+    width: 500px;
+    margin-left: 150px;
+    border-radius: 5px;
+    text-align: center;
+}
+input{
+    margin-bottom: 5px;
+    width: 300px;
+    color: black;
+}
+main{
+    padding: 450px 20px 20px;
+    margin: 0 auto;
+    position:absolute;
+}
+iframe{
+    margin-left: 50px;
+    border-radius: 5px;
+}
+.alert {
+    display: none; 
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    position: fixed;
+    top: 66%; 
+    left: 51.5%;
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+    border-radius: 5px;
+    transition:.5s;
+}
+        .alert.show {
+        display: block; 
+}

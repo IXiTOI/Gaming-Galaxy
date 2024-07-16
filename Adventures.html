@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приключения</title>
+    <link rel="stylesheet" href="genres.css">
+    <link rel="icon" type="image/png" href="/img/logo.png" sizes="32x32">
+</head>
+<body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const gamesContainer = document.querySelector('.Games');
+        
+            function filterGames() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const gameElements = gamesContainer.querySelectorAll('.GameList');
+        
+                gameElements.forEach(game => {
+                    const gameTitle = game.querySelector('.name').textContent.toLowerCase();
+        
+                    if (gameTitle.includes(searchTerm)) {
+                        game.style.display = '';
+                    } else {
+                        game.style.display = 'none';
+                    }
+                });
+            }
+        
+            searchInput.addEventListener('input', filterGames);
+        });
+    </script>
+
+    <script src="video.js"></script>
+
+    <header>
+        <a href="index.html" ><img class="logoImage" src="img/logo.png" alt="Логотип" title="На главную"></a>
+        <div class="sign-wrap">
+            <div class="logo">Gam<span>in</span>g<span> Ga</span>lax<span>y</span></div>
+        </div>
+        <ul class="main-menu">
+            <input type="text" id="searchInput" placeholder="Поиск игры...">
+            <li><a href="news.html">Новости</a></li>
+            <li class="menu-children">
+                <a href="#url">Жанры</a>
+                <ul>
+                    <li>
+                        <a href="RPG.html">RPG</a>
+                    </li>
+                    <li>
+                        <a href="Shooter.html">Шутер</a>
+                    </li>
+                    <li>
+                        <a href="Rhythm.html">Ритм-игры</a>
+                    </li>
+                    <li>
+                        <a href="Metroidvania.html">Метроидвания</a>
+                    </li>
+                    <li>
+                        <a href="VisualNovel.html">Визуальные новеллы</a>  
+                    </li>  
+                    <li>
+                        <a href="Adventures.html">Приключения</a>
+                    </li>
+                    <li>
+                        <a href="Puzzle.html">Головоломка</a>
+                    </li>
+                    <li>
+                        <a href="Strategies.html">Стратегия</a>
+                    </li>
+                    <li>
+                        <a href="Sandbox.html">Песочница</a>  
+                    </li>       
+                </ul>
+            </li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>        
+        </ul>
+    </header>
+
+    <h1><u>Приключения:</u></h1>
+    <div class="Games">
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/rOdxcy9YRoqIJzfFVChpHA.jpeg?208x288" alt="Sublustrum" title="Sublustrum">
+                    <br clear="all">
+                    <p class="name">Sublustrum</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame1"><b>></b></div>
+                <div id="videoFrame1" class="hidden">
+                    <iframe src="video/Frostpunk.mp4" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/8xDsmp7LkW--gYuHrlZKFQ.jpeg?208x288" alt="Heavy Rain" title="Heavy Rain">
+                    <br clear="all">
+                    <p class="name">Heavy Rain</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame2"><b>></b></div>
+                <div id="videoFrame2" class="hidden">
+                    <iframe src="video/Frostpunk.mp4" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/KBrSiDxMLOXBmAmO3oJxTQ.jpeg?208x288" alt="Fahrenheit" title="Fahrenheit">
+                    <br clear="all">
+                    <p class="name">Fahrenheit</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame3"><b>></b></div>
+                <div id="videoFrame3" class="hidden">
+                    <iframe src="video/Frostpunk.mp4" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/9tGKGbAoOSpYcBQBxDEaiQ.jpeg?208x288" alt="Dreamfall: The Longest Journey" title="Dreamfall: The Longest Journey">
+                    <br clear="all">
+                    <p class="name">Dreamfall: The Longest Journey</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame5"><b>></b></div>
+                <div id="videoFrame5" class="hidden">
+                    <iframe src="video/Frostpunk.mp4" title="Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="GameList">
+            <div id="gameFrame">
+                <div>
+                    <img class="img1" src="https://i.playground.ru/e/9ZsdphzTOk31nE2SKR8EGQ.jpeg?208x288" alt="Syberia" title="Syberia">
+                    <br clear="all">
+                    <p class="name">Syberia</p>
+                    <p>доп. Инфа</p>
+                </div>
+                <div class="videoG" onclick="showVideo(this)" data-video-id="videoFrame6"><b>></b></div>
+                <div id="videoFrame6" class="hidden">
+                    <iframe src="video/Frostpunk.mp4" title="Video 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gaming Galaxy</p>
+    </footer>
+</body>
+</html>

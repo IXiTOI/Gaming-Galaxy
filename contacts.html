@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="icon" type="image/png" href="/img/logo.png" sizes="32x32">
+</head>
+<body>
+    <header>
+        <a href="index.html" ><img class="logoImage" src="img/logo.png" alt="Логотип" title="На главную"></a>
+        <div class="sign-wrap">
+            <div class="logo">Gam<span>in</span>g<span> Ga</span>lax<span>y</span></div>
+        </div>
+        <ul class="main-menu">
+            <li><a href="news.html">Новости</a></li>
+            <li class="menu-children">
+                <a href="#url">Жанры</a>
+                <ul>
+                    <li>
+                        <a href="RPG.html">RPG</a>
+                    </li>
+                    <li>
+                        <a href="Shooter.html">Шутер</a>
+                    </li>
+                    <li>
+                        <a href="Rhythm.html">Ритм-игры</a>
+                    </li>
+                    <li>
+                        <a href="Metroidvania.html">Метроидвания</a>
+                    </li>
+                    <li>
+                        <a href="VisualNovel.html">Визуальные новеллы</a>  
+                    </li>  
+                    <li>
+                        <a href="Adventures.html">Приключения</a>
+                    </li>
+                    <li>
+                        <a href="Puzzle.html">Головоломка</a>
+                    </li>
+                    <li>
+                        <a href="Strategies.html">Стратегия</a>
+                    </li>
+                    <li>
+                        <a href="Sandbox.html">Песочница</a>  
+                    </li>       
+                </ul>
+            </li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>        
+        </ul>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="contact-container">
+                <h2>Наши контакты:</h2>
+                    <p id="addres"><b style="color:#078dff;">Адрес:</b> ул.Колесникова, д.3</p>
+                    <p id="tel"><b style="color:#078dff;">Телефон:</b> +375 44 999-88-77</p>
+                    <p id="email"><b style="color:#078dff;">Email:</b> info@germancars.com</p><br>
+                    <h2>Форма обратной связи:</h2>
+                    <form id="my-form" action="https://formspree.io/f/mgeggqpo" method="POST">
+                        <input placeholder="Имя" type="name" name="name" /><br>
+                        <input placeholder="Email" type="email" name="email" /><br>
+                        <textarea placeholder="Сообщение" type="text" name="message"></textarea>
+                        <br>
+                        <button class="btn">Отправить</button>
+                    </form>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.774620304316!2d27.434248360536333!3d53.917980791877056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbce2d2dc47867%3A0xfb99f31aabb006f!2z0JrQvtC70LvQtdC00LYg0LHQuNC30L3QtdGB0LAg0Lgg0L_RgNCw0LLQsA!5e0!3m2!1sru!2sby!4v1718605102004!5m2!1sru!2sby" width="600" height="450" style="border: 2px solid #078dff;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
+        
+    <script>
+        var form = document.getElementById("my-form");
+
+        async function handleSubmit(event) {
+        event.preventDefault();
+        var data = new FormData(event.target);
+        try {
+            const response = await fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+            });
+
+            if (response.ok) {
+            alert("Спасибо за ваше сообщение!");
+            form.reset();
+            } else {
+            const responseData = await response.json();
+            let errorMessage = "К сожалению, возникла проблема с отправкой вашего сообщения";
+            if (Object.hasOwn(responseData, 'errors')) {
+                errorMessage = responseData.errors.map(error => error.message).join(", ");
+            }
+            alert(errorMessage);
+            }
+        } catch (error) {
+            alert("К сожалению, возникла проблема с отправкой вашего сообщения");
+        }
+        }
+
+        form.addEventListener("submit", handleSubmit);
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Gaming Galaxy</p>
+    </footer>
+</body>
+</html>
